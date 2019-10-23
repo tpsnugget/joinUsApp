@@ -1,4 +1,4 @@
-// C2:16:289
+// C2:16:292
 
 var   faker = require("faker"),
       mysql = require("mysql")
@@ -9,13 +9,18 @@ var connection = mysql.createConnection({
    database:   "joinUsApp"
 })
 
-
+var randomEmail = []
 for (var i = 0; i < 500; i++){
-	var randomEmail = {email: faker.internet.email()}
-	connection.query("INSERT INTO users SET ?", randomEmail, function(error, results, fields) {
-   		if (error) {console.log(error)}
-	})
+	randomEmail.push(
+		[faker.internet.email(),
+		faker.date.past()]
+	)
 }
+
+var q = "INSERT INTO users (email, created_at) VALUES ?"
+connection.query(q, [randomEmail], function(error, results, fields) {
+   	if (error) {console.log(error)}
+})
 
 var q = "SELECT COUNT(*) AS total FROM users;"
 connection.query(q, function(error, results, fields) {

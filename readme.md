@@ -15,5 +15,11 @@ VALUES
 ("Katie34@yahoo.com"),
 ("Tunde@gmail.com");
 
-# C:16:289
-Learned how to add a variable into a connection.query command
+# C2:16:289
+- Learned how to add a variable into a connection.query command
+
+# C2:16:291
+Colt added the loop to insert multipe entries to the database and I updated mine
+   so the dates were not all the same
+He also showed how to do a bulk insert as opposed to 500 db queries the way I
+   initially did it. My way was very slow.
