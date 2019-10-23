@@ -1,0 +1,23 @@
+{
+  "name": "joinusapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpsnugget/joinUsApp.git"
+  },
+  "author": "Mike Giebner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tpsnugget/joinUsApp/issues"
+  },
+  "homepage": "https://github.com/tpsnugget/joinUsApp#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "mysql": "^2.17.1"
+  }
+}
