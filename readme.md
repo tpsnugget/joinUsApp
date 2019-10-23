@@ -23,3 +23,6 @@ Colt added the loop to insert multipe entries to the database and I updated mine
    so the dates were not all the same
 He also showed how to do a bulk insert as opposed to 500 db queries the way I
    initially did it. My way was very slow.
+
+# C2:17:306
+- Added in MySQL database interation getting the total number of users in the db
