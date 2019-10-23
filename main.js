@@ -4,7 +4,7 @@ var   faker = require("faker"),
 var connection = mysql.createConnection({
    host:       "localhost",
    user:       "root",
-   password:   "kmyxctxe"
+   database:   "joinUsApp"
 })
 
       console.log("")
@@ -15,9 +15,13 @@ for (var i = 0; i < 10; i++){
    console.log("")
 }
 
-var q = "SELECT 1"
-connection.connect(function(error) {
-   if (error) throw error
-   console.log("Connected!")
+var q = "SELECT CURTIME() AS time, CURDATE() as date, NOW() AS now"
+connection.query(q, function(error, results, fields) {
+   if (error) {console.log(error)}
+	else {
+   		console.log(results[0].time)
+		console.log(results[0].date)
+		console.log(results[0].now)
+	}
 })
 connection.end()
